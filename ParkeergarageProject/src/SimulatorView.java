@@ -1,4 +1,7 @@
 import javax.swing.*;
+
+import SimulatorView.CarParkView;
+
 import java.awt.*;
 
 public class SimulatorView extends JFrame {
@@ -7,17 +10,34 @@ public class SimulatorView extends JFrame {
     private int numberOfRows;
     private int numberOfPlaces;
     private Car[][][] cars;
+    //private Simulator sim;
 
     public SimulatorView(int numberOfFloors, int numberOfRows, int numberOfPlaces) {
         this.numberOfFloors = numberOfFloors;
         this.numberOfRows = numberOfRows;
         this.numberOfPlaces = numberOfPlaces;
         cars = new Car[numberOfFloors][numberOfRows][numberOfPlaces];
+        //sim = new Simulator();
         
         carParkView = new CarParkView();
+        //NIEUW
+        JPanel buttons = new JPanel();
+        JButton oneStep = new JButton("Step +1");
+        JButton hundredStep = new JButton ("Step +100");
+        /*oneStep.addActionListener(new ActionListener() {
+        				public void actionPerformed(ActionEvent e) { sim.run(1); }
+        			});
+        hundredStep.addActionListener(new ActionListener() {
+						public void actionPerformed(ActionEvent e) { sim.run(100); }
+					});*/
 
         Container contentPane = getContentPane();
-        //contentPane.add(stepLabel, BorderLayout.NORTH);
+        // --------------NIEUW----------- \\
+        contentPane.add(buttons, BorderLayout.NORTH);
+        buttons.add(oneStep);
+        buttons.add(hundredStep);
+        // \\---------------------------------// 
+
         contentPane.add(carParkView, BorderLayout.CENTER);
         //contentPane.add(population, BorderLayout.SOUTH);
         pack();
