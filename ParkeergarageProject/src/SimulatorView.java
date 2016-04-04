@@ -1,8 +1,7 @@
 import javax.swing.*;
-
-import SimulatorView.CarParkView;
-
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class SimulatorView extends JFrame {
     private CarParkView carParkView;
