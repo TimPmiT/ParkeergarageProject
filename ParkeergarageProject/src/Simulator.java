@@ -12,7 +12,7 @@ public class Simulator {
     private int hour = 0;
     private int minute = 0;
 
-    private int tickPause = 100;
+    private int tickPause = 100; //TEST TEST TEST
 
     int weekDayArrivals= 50; // average number of arriving cars per hour
     int weekendArrivals = 90; // average number of arriving cars per hour
