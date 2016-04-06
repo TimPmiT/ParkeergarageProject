@@ -7,9 +7,5 @@ public class ParkingPassHolder extends Car {
 		  setIsMember(); 
 		  
 	  }
-	  
-	  
-
-    
 
 }
