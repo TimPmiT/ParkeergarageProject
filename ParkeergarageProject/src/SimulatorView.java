@@ -17,6 +17,7 @@ public class SimulatorView extends JFrame {
         this.numberOfPlaces = numberOfPlaces;
         cars = new Car[numberOfFloors][numberOfRows][numberOfPlaces];
         //sim = new Simulator();
+        //TEST TEST TEST
         
         carParkView = new CarParkView();
         //NIEUW
